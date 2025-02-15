@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{}) }">
+<head>
+    <title>Services Page</title>
+</head>
+<body>
+    <div id="content" class="pt-16">
+        <!-- Hero Section -->
+        <section class="bg-blue-500 text-white text-center py-20 dark:bg-gray-800">
+            <h1 class="text-5xl font-bold">Our Services</h1>
+            <p class="mt-6 text-lg">Explore the features and benefits of using Contact Manager.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-gray-50 dark:bg-gray-700">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold">What We Offer</h2>
+                <p class="mt-4 text-gray-600 dark:text-gray-300">Discover the tools and features designed to simplify your contact management.</p>
+            </div>
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                <!-- Service 1 -->
+                <div class="bg-white shadow-md rounded-lg p-6 text-center dark:bg-gray-800">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Add & Manage Contacts</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Easily add, edit, and organize your contacts in a user-friendly interface.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white shadow-md rounded-lg p-6 text-center dark:bg-gray-800">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-trash-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Delete Contacts</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Remove unnecessary contacts to keep your contact list up-to-date and organized.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white shadow-md rounded-lg p-6 text-center dark:bg-gray-800">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Download Contacts</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Export your contact list effortlessly in a downloadable format.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white shadow-md rounded-lg p-6 text-center dark:bg-gray-800">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Secure Sign-In</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Sign in using Google or GitHub for secure and seamless access.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white shadow-md rounded-lg p-6 text-center dark:bg-gray-800">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Data Security</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Your data is protected with top-level encryption and secure storage.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white shadow-md rounded-lg p-6 text-center dark:bg-gray-800">
+                    <div class="text-blue-500 text-4xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+                    <p class="text-gray-600 dark:text-gray-300">Access support anytime for assistance with managing your contacts.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="bg-blue-500 text-white text-center py-12 mt-8 dark:bg-gray-800">
+            <p class="text-lg">&copy; 2025 Contact Manager. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- <script>
+        console.log("services page")
+    </script> -->
+</body>
+</html>

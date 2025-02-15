@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script}) }">
+<head>
+    <title data-th-text="${loggedInUser.name}+' | SCM'">Profile Page</title>
+</head>
+<body>
+    <div id="content">
+        <!-- sidebar -->
+        <!-- if use is logged in :- sidebar -->
+        <div th:if="${loggedInUser}">
+            <div th:replace="~{user/sidebar :: sidebar}"></div>
+        </div>
+
+
+   
+        
+
+        <div  class=" sm:pl-64 pt-20  sm:pt-24 lg:pt-48 h-full w-full">
+            <div class="  flex justify-center flex-col items-center m-16">
+                <!-- profile pic content -->
+                <div class="w-full max-w-md bg-white shadow-lg rounded-lg overflow-hidden dark:bg-gray-700 dark:text-white sm:max-w-lg md:max-w-2xl md:m-20 lg:max-w-3xl">
+                    <div class="flex justify-center p-4">
+                        <img data-th-src="${loggedInUser.profilePic}" src="https://via.placeholder.com/150" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-blue-500">
+                    </div>
+                    <div class="px-6 py-4 text-center">
+                        <h2 class="text-xl font-bold text-gray-800 dark:text-white" data-th-text="${loggedInUser.name}">John Doe</h2>
+                        <p class="text-gray-600 dark:text-white" ><strong>Email:</strong> <span data-th-text="${loggedInUser.email}">John@gmail.com</span> </p>
+
+                        <p class="text-gray-600 dark:text-white">
+                            <strong>Phone:</strong> 
+                            <span th:text="${loggedInUser.phoneNumber != null ? loggedInUser.phoneNumber : '+91 2222222222'}"></span>
+                        </p>
+                        
+                        <p class="text-gray-500 text-sm mt-2 dark:text-white" data-th-text="${loggedInUser.about}">Software Developer passionate about building user-centric applications.</p>
+                    </div>
+                    <div class="px-6 py-4 border-t flex justify-between">
+                        <p class="text-sm text-gray-600 dark:text-white"><strong>Email Verified:</strong> <span data-th-text="${loggedInUser.emailVerified?'YES':'NO'}">No</span></p>
+                        <p class="text-sm text-gray-600 dark:text-white"><strong>Phone Verified:</strong> <span data-th-text="${loggedInUser.phoneVerified?'YES':'NO'}">No</span> </p>
+                    </div>
+            
+            </div>
+            
+        </div>
+
+        
+    </div>
+    
+
+    <script>
+        console.log("Profile page")
+    </script>
+
+</body>
+</html>
